@@ -3,122 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indian Election Results 2024</title>
+    <title>Viz: Indian Election - 2024</title>
     <style>
         body {
-            font-family: "Space Mono", Arial, serif;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 1.7;
-            color: #4d4d4d;
-            background: #fff;
-           
-    
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color:#ffff;
+            color: #333;
         }
-        h2 {
-            color: #4d4d4d;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h3 {
-            color: #4d4d4d;
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
         }
-        p, ul {
-            color: #4d4d4d;
+        p {
+            line-height: 1.6;
+            margin-bottom: 10px;
         }
-        .highlight1 {
-            color: blue;
+        a {
+            color: #2980b9;
+            text-decoration: none;
         }
-        .highlight2 {
-            color: green;
+        a:hover {
+            text-decoration: underline;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .section {
+            margin-bottom: 30px;
+        }
+        .kpi, .bar-chart, .pie-chart, .table {
             margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
         }
-        table, th, td {
-            border: 1px solid #bdc3c7;
+        .kpi p, .bar-chart p, .pie-chart p, .table p {
+            margin-top: 0;
         }
-        th, td {
-            padding: 8px;
-            text-align: left;
+        .source {
+            font-size: 0.9em;
+            color: #555;
         }
-        th {
-            background-color: #ecf0f1;
+        .visualization-image {
+            margin-top: 20px;
+            text-align: center;
+            background-color: #fafafa; /* Background color added */
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .visualization-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
 
-    <h2>Data Visualization Story: Indian Election Results 2024</h2>
-    <h3>https://github.com/jyotiharti/indian-election-results-2024/tree/main</h3>
+    <div class="container">
+        <div class="section">
+            <h1>Viz: Indian Election - 2024</h1>
+            <p><strong>Description:</strong> India is divided into 543 constituencies. Each constituency elects one member to the Lok Sabha. The elections use a first-past-the-post system, where the candidate with the highest number of votes in a constituency wins the seat. Numerous political parties participate, with major ones being the Bharatiya Janata Party (BJP), Indian National Congress (INC), and various regional parties. Citizens of India aged 18 and above are eligible to vote.</p>
+        </div>
 
-    <h3>1. Overview and Summary</h3>
-    <p>
-        The Indian Election Results of 2024 reveal significant insights into the political dynamics across the country. This visualization provides a detailed analysis of the election outcomes, highlighting the performance of major alliances and parties.
-    </p>
-    <ul>
-        <li>Number of States & UT: <span class="highlight1">36</span></li>
-        <li>Total Constituencies: <span class="highlight1">543</span></li>
-        <li>Seats Won by Major Alliances:
-            <ul>
-                <li>NDA: <span class="highlight1">293</span></li>
-                <li>I.N.D.I.A: <span class="highlight1">232</span></li>
-            </ul>
-        </li>
-        <li>Seats Won by Major Parties:
-            <ul>
-                <li>BJP: <span class="highlight1">240</span></li>
-                <li>INCP: <span class="highlight1">99</span></li>
-            </ul>
-        </li>
-    </ul>
+        <div class="section">
+            <h2>Objective:</h2>
+            <p>The main objective of the 2024 Indian general election is to elect 543 MPs to the Lok Sabha, forming the next government and strengthening democracy. It will also highlight the leading parties, top candidates, and the percentage of votes divided among the parties.</p>
+            <p class="source"><strong>Source:</strong> <a href="https://www.kaggle.com/" target="_blank">https://www.kaggle.com/</a></p>
+        </div>
 
-    <h3>2. Positive Points of Election 2024</h3>
-    <ul>
-        <li>High Voter Turnout: The election witnessed a record high voter turnout, reflecting the active participation and engagement of the electorate in the democratic process.</li>
-        <li>Peaceful Conduct: The election was largely peaceful with minimal reports of violence or disturbances, showcasing the maturity and stability of the electoral process.</li>
-        <li>Technological Advancements: The use of advanced technology in voting and counting processes ensured greater accuracy and efficiency in the election results.</li>
-        <li>Increased Representation: There was a noticeable increase in the representation of women and minority candidates, indicating a more inclusive political environment.</li>
-    </ul>
+        <div class="section">
+            <h2>Data Story:</h2>
+            <div class="visualization-image">
+                <!-- <p>The visualizations provide insights into the Indian election results of 2024.</p> -->
+                <img src="images/data_election.jpg" alt="Visualization Image">
+            </div>
 
-    <h3>3. Negative Points of Election 2024</h3>
-    <ul>
-        <li>Electoral Disparities: Despite high voter turnout, there were reports of electoral disparities in certain regions, with some constituencies experiencing issues such as voter suppression or technical glitches.</li>
-        <li>Campaign Malpractices: Instances of campaign malpractices, including misinformation and the use of unethical tactics, were reported, raising concerns about the integrity of the electoral campaigns.</li>
-        <li>Polarization: The election highlighted deep political and social polarization, with divisive rhetoric dominating much of the campaign discourse.</li>
-        <li>Delayed Results: In some areas, delays in the counting process led to uncertainty and speculation, affecting the overall transparency and trust in the election outcomes.</li>
-    </ul>
+            <div class="kpi">
+                <p><strong>KPI's:</strong> The KPI's explain the number of states and union territories, number of Lok Sabha constituencies, the winning alliance of NDA, INDIA, and others, and the highest seats winning parties.</p>
+            </div>
 
-    <h3>4. Top 6 Leading Parties</h3>
-    <p>To understand the distribution of power, we examine the top six leading parties in the election. The bar chart below shows the number of seats won by these parties, illustrating their relative strength and influence.</p>
-    <!-- Insert Bar Chart: Top 6 Leading Parties -->
+            <div class="bar-chart">
+                <p><strong>Top Leading Parties:</strong> The bar chart explain the top leading parties with their highest winning seats. The Bharatiya Janata Party comes on top with winning of 240 seats, Indian National Congress comes in second with winning of 99 seats, and other parties as shown in the charts.</p>
+            </div>
 
-    <h3>5. Margin-wise Leading Candidates</h3>
-    <p>The margin of victory is a crucial indicator of electoral competitiveness. The following bar chart categorizes leading candidates based on their winning margins, showcasing those who secured the largest leads over their opponents.</p>
-    <!-- Insert Bar Chart: Margin-wise Leading Candidates -->
+            <div class="bar-chart">
+                <p><strong>Margin Wise Leading Candidates:</strong> The bar chart explain the margin-wise leading candidates. Mr. Shankar Lalwani from Indore constituency of Bharatiya Janata Party holds the first place in this chart. We can visualize the other candidates in the chart as required.</p>
+            </div>
 
-    <h3>6. Percentage of Alliance Seats</h3>
-    <p>Understanding the distribution of seats among the major alliances provides insights into the coalition dynamics and potential government formation. The pie chart below illustrates the percentage of total seats won by the major alliances.</p>
-    <!-- Insert Pie Chart: Percentage of Alliance Seats -->
+            <div class="pie-chart">
+                <p><strong>% of Alliance:</strong> Pie chart indicates the percentage of alliance. NDA holds 54% with winning of 293 seats, INDIA holds 43% with winning of 232 seats, and others hold 3% with winning of 18 seats.</p>
+            </div>
 
-    <h3>7. Constituency-wise Results</h3>
-    <p>For a detailed view of the election outcomes, the table below lists each constituency along with the leading candidates and their respective parties. This granular data provides a constituency-level perspective on the election results.</p>
+            <div class="table">
+                <p><strong>Constituency Wise Leading Candidates:</strong> The table indicates the constituency-wise leading candidates and the winning party.</p>
+            </div>
 
-    <table>
-        <tr>
-            <th>Constituency</th>
-            <th>Leading Candidate</th>
-            <th>Leading Party</th>
-        </tr>
-        <!-- Repeat the following <tr> block for each constituency -->
-        <tr>
-            <td>[Insert constituency]</td>
-            <td>[Insert candidate]</td>
-            <td>[Insert party]</td>
-        </tr>
-        <!-- End repeat -->
-    </table>
+        </div>
+
+        
+    </div>
 
 </body>
 </html>
-
