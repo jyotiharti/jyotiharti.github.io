@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Sales</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color:#ffff;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .kpi, .bar-chart, .pie-chart, .table {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .kpi p, .bar-chart p, .pie-chart p, .table p {
+            margin-top: 0;
+        }
+        .source {
+            font-size: 0.9em;
+            color: #555;
+        }
+        .visualization-image {
+            margin-top: 20px;
+            text-align: center;
+            background-color: #fafafa; /* Background color added */
+            padding: 0px;
+            border-radius: 8px;
+        }
+        .visualization-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="section">
+            <h1>Pizza Sales</h1>
+            <h2>Description:</h2>
+            <p>Online sales revolutionize commerce by facilitating transactions of goods and services through digital platforms. This global marketplace offers convenience, accessibility, and a vast array of products to consumers worldwide. It promotes competitive pricing, personalized shopping experiences, and seamless transactions, driving the exponential growth of e-commerce on a global scale..</p>
+        </div>
+
+        <div class="section">
+            <h2>Objective:</h2>
+            <p>Increase revenue by reaching a global audience and expanding market presence. Improve customer experience with convenient, personalized shopping. Enhance brand visibility and competitiveness in the digital marketplace. Streamline operations to reduce costs and boost efficiency.</p>
+            <p class="source"><strong>Source:</strong> <a href="https://www.kaggle.com/datasets/shreyanshverma27/online-sales-dataset-popular-marketplace-data" target="_blank">https://www.kaggle.com/</a></p>
+        </div>
+
+        <div class="section">
+            <h2>Data Story:</h2>
+            <div class="visualization-image">
+                <!-- <p>The visualizations provide insights into the Indian election results of 2024.</p> -->
+                <img src="images/shopping_viz.jpg.png" alt="Visualization Image">
+            </div>
+
+            <div class="kpi">
+                <p><strong>Payment Methods:</strong>
+                    <ul> 
+                        <li><strong>Credit Card:</strong> A credit card allows users to borrow money up to a certain limit to make purchases or withdraw cash.</li> 
+                        <li><strong>Debit Card:</strong> A debit card is linked directly to the user's bank account and allows for purchases or cash withdrawals using funds already available in the account.</li> 
+                        <li><strong>PayPal:</strong> PayPal is an online payment system that allows users to make secure transactions, send and receive money, and pay for goods and services online.</li> 
+                    </ul>
+            </div>
+
+            <div class="bar-chart">
+                <p>In North America, electronics generate the highest revenue. Credit cards are the primary payment method for purchasing electronics, sports equipment, and books in this region, with Asia following closely behind. This shopping activity primarily occurs from January to March.
+
+                    In Asia, people predominantly use debit cards to buy clothing from January to May, with a peak in March. The most frequently purchased product with debit cards is the 'Hanes ComfortSoft T-Shirt,' while the 'Nike Air Force 1' generates the most revenue.
+                    
+                    In Europe, PayPal is the preferred payment method for buying home appliances and beauty products from February to March and again in May. This trend is likely influenced by the onset of summer during these months. </p>
+            </div>
+
+        </div>
+
+        
+    </div>
+
+</body>
+</html>
