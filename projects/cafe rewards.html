@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Rewards</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color:#ffff;
+            color: #333;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .kpi, .bar-chart, .pie-chart, .table {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .kpi p, .bar-chart p, .pie-chart p, .table p {
+            margin-top: 0;
+        }
+        .source {
+            font-size: 0.9em;
+            color: #555;
+        }
+        .visualization-image {
+            margin-top: 20px;
+            text-align: center;
+            background-color: #fafafa; /* Background color added */
+            padding: 0px;
+            border-radius: 8px;
+        }
+        .visualization-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="section">
+            <h1>Cafe Rewards Analysis</h1>
+            <h2>Description:</h2>
+            <p>
+            Data that simulates the behavior of Cafe Rewards members over a 30-day period, including their transactions and responses to promotional offers. The data is contained in three files: one with details on each offer, another with demographic information on each customer, and a third with the activity for each customer during the period. The activities are divided into offer received, offer viewed, offer accepted, and transaction. For a transaction to be attributed to an offer, it must occur at the same time as when the offer was "completed" by the customer.
+            This analysis is performed using data modeling and visualization techniques in Power BI.</p>
+   
+        </div>
+
+        <div class="section">
+            <h2>Objective:</h2>
+            <p>The objective of analysis is to identify key customer segments and develop a data-driven strategy for future promotional messaging & targeting. </p>
+            
+            <p>In this project, the data analyst's role is to optimize future promotional messaging and customer targeting based on cafe data.<p>   
+                
+            <p class="source"><strong>Source:</strong> <a href="https://mavenanalytics.io/challenges" target="_blank">https://mavenanalytics.io/challenges</a></p>
+        </div>
+
+        <div class="section">
+            <div class="bar-chart">
+            <h2>Customer Analysis:</h2>
+            <div class="visualization-image">
+                <!-- <p>The visualizations provide insights into the Indian election results of 2024.</p> -->
+                <img src="images/cafe_rewards_customers.png" alt="Visualization Image">
+            </div>
+
+            <div class="kpi">
+                <!-- <h3>Customer Analysis:</h3> -->
+                   
+                    <p><b>Key Insights: </b> Out of 17,000 registered customers, <b>2,175 Unknown customers</b> <b>(12.79%)</b> prefer not to share their personal details such as gender, age, and income. These customers account for 12.82% of the total offers sent.</p>
+                   <p>In 2013, the number of registered customers was very low. However, there was steady progress in customer registrations each year. In 2017, there was a significant spike, followed by a dip in 2018.</p>
+                    <p><b style="color: gray;">Gender:</b> Male customers - 49.91%, Female customers-36.05% and Other customers- 1.25%.</p>
+                    <p><b style="color: gray;">Age:</b> 18-30 - 10.03%, 31-50 - 23.46%, 51-70 - 38.24% and 71-101 - 15.48%.</p>    
+                    <p><b style="color: gray;">Income:</b> $30k-50k - 23.72%, $50k-70k - 29.44%, $70k-90k - 21.12% and $90k-120k - 12.90%.</p>
+                    
+                     <p>Male customers receive the highest share of offers at 49.99%. Of the offers they receive, 37.10% are viewed, with a final conversion rate of 21.59%. Female customers receive 36% of offers, with 27.25% being viewed and a final conversion rate of 20.29%. Other customers receive 1.20% of offers, with a conversion rate of only 0.66%. Although male customers receive the most offers, the conversion rate for female customers is 13.18% higher.</p>
+                     <p>Customers aged 51-70 received 38.33% of offers, with 28.29% being viewed and a final conversion rate of 19.76%. Those aged 71-101 received 15.40% of offers, with 11.59% being viewed and a conversion rate of 8.03%. Both of these age groups have a conversion rate above 50%. The 31-50 age group received 23.37% of offers with a completion rate of 10.88%, while the 18-30 group received 10.08% of offers, with a 3.86% completion rate. </p>
+                     <p>Customers with an income of $90k-$120k received 12.87% of offers, completing 7.87% (61.18% conversion rate). Those earning $70k-$90k received 21.08% of offers, completing 12.16% (57.65% conversion rate). The $50k-$70k group received the highest share at 29.49%, with a 13.92% completion rate, while the $30k-$50k group received 23.74% of offers, completing 8.59%.</p>
+                     
+                     <p><b>Recommendations: </b>Target male and unknown customers, prioritizing an increase in male customer conversion rates. Additionally, focus on the unknown customer segment, as their conversion rate is significantly lower at just 1.49%.</p>
+                     <p>Target customers in the 18-30 age group by sending them exciting offers.</p>
+                     <p>Target customers in the $30k-$50k and $50k-$70k income groups, as they are receiving the most offers but have lower conversion rates compared to other income categories. </p>
+       
+
+            </div>
+            <div class="section">
+            <div class="bar-chart">
+                <h2>Transaction And Rewards Analysis:</h2>
+                <div class="visualization-image">
+                    <!-- <p>The visualizations provide insights into the Indian election results of 2024.</p> -->
+                    <img src="images/cafe_rewards_transactions.png" alt="Visualization Image">
+                </div>  
+                
+                </div>
+                <div class="section"></div>
+                 <div class="bar-chart">   
+                <p><b>Key Insights:</b> Customers are currently receiving 40% of both discount and BOGO offers, making up a combined 80%, with informational offers making up the remaining 20%. However, customers show a preference for BOGO offers at 44.09% and discount offers at 37.15%. Despite this preference, the redemption rate is higher for discount offers at 53.34%, compared to 46.66% for BOGO offers, but customrs are receiving 68.89% rewards from Bogo and 31.11% from discount offers.</p>
+                <p>Customers receive 39.86% of offers through web, email, mobile, and social channels, followed by 30.60% via web, email, and mobile, and 20.03% through email, mobile, and social. Mobile is the most common medium across these top three channels. Similarly, customers prefer to view offers 50.63% through web, email, mobile, and social channels, followed by 23.22% via email, mobile, and social, and 21.54% through web, email, and mobile. The highest 53.9% conversion rate is seen in the web, email, mobile, and social channels, followed by 24.93% in web, email, and mobile. </p>
+                <p>Male and female customers making 96.24% of total transaction, and both customers are sharing equal rewards.</p>
+                <p>The 51-70 age group makes up 46.33% of total transactions, followed by the 31-50 group at 23.98%. Those aged 71-101 account for 19.24%, while the 18-30 group has the lowest spending at 8.16%. Rewards are distributed in proportion to these transaction levels.</p>
+                <p>Customers in the $50k-70k and $70k-90k income groups represent 29.61% and 29.78%, respectively, making up around 60% of total transactions. Those earning $90k-120k contribute 22.81%, while $30k-50k customers account for 15.51%.</p>
+                <p>When looking at the month by weeks, an average of 12,712 offers per day are sent to customers during week 1 and week 2 (two days each) and week 3 and week 4 (four days each). On average 2,000 offers are viewed on the same day they are sent. There is a noticeable spike in transactions on the day offers are received. Additionally, customers are more likely to make purchases during week 3 and week 4. </p>
+                
+                <p><b>Recommendations:</b> We should prioritize promoting discount offers over bogo offers, as they require less reward spending. The bogo offers demand higher reward spending to drive business growth, making discount offers a more cost-effective option for promotion.</p>
+            <p>Instead of using four combined channels, it's better to have individual channels like "Web," "Email," "Mobile," and "Social." This approach will help better track and analyze customer behavior in response to receiving offers on each specific channel.</p>
+            <p>Male customers are receiving more offers, but their transactions are equal to those of female customers. To boost sales, we should encourage male customers to make more purchases.</p>
+            <p>Customers in the 18-30 age group and the $30k-$50k income range are the least likely to spend. To encourage higher purchasing, we should offer more exciting promotions, such as student discounts and tailored offers, to better appeal to their needs.</p>
+            <p>
+                Try sending more offers in week-1 and week-2, as customers tend to spend more at the beginning of the month rather than at the end. This strategy could help capture higher engagement and increase sales earlier in the month</p>
+        </div>
+
+           
+</body>
+</html>

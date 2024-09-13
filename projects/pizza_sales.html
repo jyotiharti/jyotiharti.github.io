@@ -13,7 +13,7 @@
             color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 20px;
             background-color: #ffffff;
@@ -72,42 +72,109 @@
 
     <div class="container">
         <div class="section">
-            <h1>Pizza Sales</h1>
+            <h1>Pizza Sales Analysis-2015</h1>
             <h2>Description:</h2>
-            <p>Online sales revolutionize commerce by facilitating transactions of goods and services through digital platforms. This global marketplace offers convenience, accessibility, and a vast array of products to consumers worldwide. It promotes competitive pricing, personalized shopping experiences, and seamless transactions, driving the exponential growth of e-commerce on a global scale..</p>
+            <p>The project provides insights and recommendations for improving the operations of a pizza restaurant. It includes data with 48,620 rows detailing order specifics, order dates, pizza types, and sizes. By analyzing key metrics such as total orders, total revenue, peak hour demand, and the popularity of different pizzas, the project offers valuable information. This analysis is performed using data modeling and visualization techniques in Power BI.</p>
+   
         </div>
 
         <div class="section">
             <h2>Objective:</h2>
-            <p>Increase revenue by reaching a global audience and expanding market presence. Improve customer experience with convenient, personalized shopping. Enhance brand visibility and competitiveness in the digital marketplace. Streamline operations to reduce costs and boost efficiency.</p>
-            <p class="source"><strong>Source:</strong> <a href="https://www.kaggle.com/datasets/shreyanshverma27/online-sales-dataset-popular-marketplace-data" target="_blank">https://www.kaggle.com/</a></p>
+            <p>The objective of analyzing pizza sales is to optimize business performance by identifying trends and patterns in customer preferences, peak sales periods, and product popularity. This analysis helps in making informed decisions to increase revenue, enhance customer satisfaction, streamline operations, and effectively manage inventory.</p>
+            
+            <p>In this project, the role of a data analyst is assumed to optimize the operational efficiency of a pizza restaurant using its data.<p>
+
+                <p>The project seeks to address the following questions:</p>
+                <ul>
+                <li>What are the corelation between total order and total revenue?</li> 
+                <li>Which are the factors affecting the orders and revenue?</li>  
+                <li>When are the busiest days and times?</li>
+                <li>How many pizzas are made during peak hours?</li>
+                <li>Which pizzas are the most and least orderd?</li>
+                <li>How effectively is the seating capacity being utilized?</li>
+            </ul>
+            <p class="source"><strong>Source:</strong> <a href="https://www.kaggle.com/datasets/mysarahmadbhat/pizza-place-sales" target="_blank">https://www.kaggle.com/</a></p>
         </div>
 
         <div class="section">
             <h2>Data Story:</h2>
             <div class="visualization-image">
                 <!-- <p>The visualizations provide insights into the Indian election results of 2024.</p> -->
-                <img src="images/shopping_viz.jpg.png" alt="Visualization Image">
+                <img src="images/pizza_sales.png" alt="Visualization Image">
             </div>
 
             <div class="kpi">
-                <p><strong>Payment Methods:</strong>
-                    <ul> 
-                        <li><strong>Credit Card:</strong> A credit card allows users to borrow money up to a certain limit to make purchases or withdraw cash.</li> 
-                        <li><strong>Debit Card:</strong> A debit card is linked directly to the user's bank account and allows for purchases or cash withdrawals using funds already available in the account.</li> 
-                        <li><strong>PayPal:</strong> PayPal is an online payment system that allows users to make secure transactions, send and receive money, and pay for goods and services online.</li> 
-                    </ul>
+                <p><strong>Order Value And Revenue Analysis:</strong>
+                    <p>This can be understood by examining the line charts:</p>
+                        <ul>
+                        <li>The highest number of orders was recorded in Q3, while the lowest occurred in Q4.</li>
+                        <li>The highest revenue was recorded in Q2, while the lowest was in Q4.</li>
+                        <li>Out of the 12 months, 4 months had order counts below the monthly average.</li>
+                        <li>Out of the 12 months, 4 months had revenue counts below the monthly average.</li>
+                     </ul>
+                     <div class="visualization-image">
+                        <!-- <p>The visualizations provide insights into the Indian election results of 2024.</p> -->
+                        <img src="images/pizza_sale.png" alt="Visualization Image">
+                    </div>
+                    <div class="visualization-image">
+                        <!-- <p>The visualizations provide insights into the Indian election results of 2024.</p> -->
+                        <img src="images/order_revenue.png" alt="Visualization Image">
+                    </div>
+
+                     <p><b>Key Insights: </b>The 4th quarter recorded the lowest number of orders, totaling 5.12K, which is 220 orders below the quarterly average. This decline may be attributed to the end of summer. Additionally, there were 5 days in Q4 without any orders (October 5, 12, 19, 26, and December 25), which could account for approximately 300 fewer orders, yet we observed only a 220-order shortfall.</p>
+                     <p>In Q4, only November surpassed the average monthly order volume of 1.78K, achieving a total of 1.79K orders. November also recorded the highest pizza quantity per order, averaging 2.38, which is 2.58% more than the average of 2.32. Similarly, the average order value increased to $39.28, 2.53% higher than the average of $38.31. This increase was driven by significant contributions from Thanksgiving and Black Friday, which saw the highest daily order counts of 113 and 115, respectively. These events enabled November to exceed its average daily order count of 59.73. </p>
+                     <p>The revenue trend is similar to the orders trend except for Q3 (5.44K orders) which is surprisingly recorded lower revenue ($205K) as compared to Q2 (5.43K orders) with ($208K) revenue. </p>
+                     <p>In August, the quantity of pizza ordered averaged 2.26 per order, which is 2.58% below the average of 2.32. Similarly, the average order value dropped to $37.09, a decrease of 3.18% compared to the average of $38.31. This decline may be attributed to people preferring outdoor dining during the summer rather than ordering pizza. Additionally, the holidays on September 24 and 25 likely impacted Q3 revenue.</p>
+                     <p><b>Recommendations: </b>Offering reward cards can encourage repeat customers, which in turn can boost the number of orders.</p>
+                     <p>During the fourth quarter, which includes festival and holiday periods when families are more likely to gather, offering family pack pizza deals could increase both orders and revenue.</p>
+
+
             </div>
 
             <div class="bar-chart">
-                <p>In North America, electronics generate the highest revenue. Credit cards are the primary payment method for purchasing electronics, sports equipment, and books in this region, with Asia following closely behind. This shopping activity primarily occurs from January to March.
+                <p><strong>Peak Sales Time Analysis:</strong>
+                    <p>This can be understood by examining the heat map and bar chart:</p>
+                        <ul>
+                        <li>Peak Hours are between 12-1 pm and 5-6 pm</li>
+                        <li>Weekdays highest pizzas are sold at lunch</li>
+                        <li>Weekends tend to have more customers in the evning.</li>
+                        <li>The least pizza sold are at 10-11am and 11pm</li>
+                     </ul>
+                <div class="visualization-image">
+                    <!-- <p>The visualizations provide insights into the Indian election results of 2024.</p> -->
+                    <img src="images/pizza_sale_peakhours.png" alt="Visualization Image">
+                </div>
 
-                    In Asia, people predominantly use debit cards to buy clothing from January to May, with a peak in March. The most frequently purchased product with debit cards is the 'Hanes ComfortSoft T-Shirt,' while the 'Nike Air Force 1' generates the most revenue.
-                    
-                    In Europe, PayPal is the preferred payment method for buying home appliances and beauty products from February to March and again in May. This trend is likely influenced by the onset of summer during these months. </p>
-            </div>
 
+                <p><b>Key Insights:</b> The average pizza baked per day is 138.47. The peak hours on weekdays are from 12-2 pm and 5-6 pm, accounting for 48.14% of daily pizza sales, with 15 orders generating $610 in revenue. In contrast, the slowest times are at 10 am and 11 pm, making up just 3.65% of daily sales, with 2 orders bringing in $86. On weekends, the busiest periods are in the evening.</p>
+                <p>The restaurant operates from 11 am to 11 pm during January, August, and December, while in the other nine months, it opens at 10 am. Notably, on November 24th, the restaurant received an order as early as 9:52 am. Throughout the rest of the year (excluding January, August, and December), only six orders were placed at 10 am, indicating that the restaurant typically receives few orders around that time.</p>
+               <p>During peak hours, the average number of pizzas sold per order is 2.69, which is higher than the overall average of 2.32 pizzas per order. This suggests that customers are typically purchasing between 2 and 3 pizzas per order, indicating that each order might be serving 2 to 3 people.</p>
+                <p><b>Recommendations:</b>
+                    To boost sales during lunch hours, introducing a lunchtime combo deal would be effective. Similarly, weekend promotions can drive increased sales on weekends.</p>
+            <p>Given the low number of orders at 10 am and 11 pm, it would be more efficient to adjust the restaurant's hours by opening at 11 am year-round..</p>
+            <p>
+                Since each order typically serves 2 to 3 customers, it's advisable to have mostly 2-seater tables with a few 3-seater tables available.</p>
         </div>
+
+            <div class="bar-chart">
+                <p><strong>Top and Bottom Performing Pizzas Analysis:</strong>
+                    <p>This can be understood by examining the bar chart:</p>
+                        <ul>
+                        <li>The Classic Deluxe Pizza is the most ordered item, with a total of 2,329 orders.</li>
+                        <li>The Thai Chicken Pizza generated the highest revenue, totaling $43,434.</li>
+                        <li>The Brie Carre Pizza is the least ordered item, with a total of 400 orders.</li>
+                        <li>The Brie Carre Pizza generated the least revenue, totaling $11,588.</li>
+                     </ul>
+                    <div class="visualization-image">
+                        <!-- <p>The visualizations provide insights into the Indian election results of 2024.</p> -->
+                        <img src="images/top_bottom_pizza.png" alt="Visualization Image">
+                    </div>
+                <p><b>Key Insights:</b> The Classic Deluxe Pizza is the most ordered item, with an average price of $16.17 across all sizes, generating $38.18K in revenue and an average order value of $16.39. The second most ordered pizza is the Hawaiian, with $32.27K in revenue, followed by the Pepperoni, which brought in $30.16K. Despite their popularity, none of these pizzas fall into the highest revenue category because their average order values are lower than that of the Thai Chicken Pizza, which stands at $19.50.</p>
+                     <p>The Thai Chicken is the highest revenue($43.43K) generated with average order value of $19.5. And it is the 5th most ordered pizza. Barbecue Chicken generated the second most revenue($42.76). And California Chicken generated the third most revenue($41.41)</p>
+                     <P>The Brie Carre Pizza is the least ordered 480 time. 180 less than the average orders per pizza type(667.14). The average order value is $23.65 across all sizes making it the most expensive pizza type.  </P>
+                    <p>The Brie Carre Pizza generated the least revenue due to the less number of orders. The average order value is more than the other pizza type. it can produce more revenue if we give offers to customers.</p>
+                <p><b>Recommendations:</b> Consider removing the Brie Carre Pizza from the menu. However, given its average order value of $23.65, which is higher than other pizzas, we might recommend promoting it more effectively. One option is to offer a deal where customers can buy the Brie Carre Pizza and receive a less expensive pizza for free, thereby encouraging more frequent purchases of the Brie Carre Pizza.
+                    <p>Encouraging customers to purchase Thai Chicken, Barbecue Chicken, and California Chicken pizzas through special offers could boost their rankings among the top-ordered items.</p>
 
         
     </div>
