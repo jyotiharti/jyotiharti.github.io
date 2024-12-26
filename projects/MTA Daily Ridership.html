@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTA Daily Ridership</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color:#ffff;
+            color: #333;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .kpi, .bar-chart, .pie-chart, .table {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .kpi p, .bar-chart p, .pie-chart p, .table p {
+            margin-top: 0;
+        }
+        .source {
+            font-size: 0.9em;
+            color: #555;
+        }
+        .visualization-image {
+            margin-top: 20px;
+            text-align: center;
+            background-color: #fafafa; /* Background color added */
+            padding: 0px;
+            border-radius: 8px;
+        }
+        .visualization-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="section">
+            <h1>Back on Track? A Fresh Look at MTA's Ridership Recovery Trends</h1>
+            <p></p>
+            <h2>Description:</h2>
+            <p>
+                The daily ridership dataset provides systemwide ridership and traffic estimates for the Metropolitan Transportation Authority's (MTA) different services beginning March 1st, 2020, and provides a percentage comparison against pre-pandemic figures. This analysis is performed using data modeling and visualization techniques in Power BI.</p>
+   
+        </div>
+
+        <div class="section">
+            <h2>Objective:</h2>
+            <p>The objective of analysis is to create an interactive visual or dashboard that illustrates post-pandemic ridership recovery trends across the MTA's services.</p>
+            <p>In this project, the data analyst's role is to work as a Data Visualization Specialist for the Data & Analytics Team at the Metropolitan Transportation Authority (MTA), North America's largest transportation network.<p> 
+            <p>The project seeks to address the following questions:</p> 
+            <ul>
+                <li>What was the share of traffic by service before the pandemic? Did it change?</li>
+                <li>Which service saw the biggest drop-off in traffic? Has it recovered?</li>
+                <li>Which service was the fastest to recover?</li>
+                <li>When are all the services estimated to return to pre-pandemic levels?</li>
+
+            </ul>   
+                
+            <p class="source"><strong>Source:</strong> <a href="https://mavenanalytics.io/challenges/maven-commuter-challenge/2300490c-532e-4f34-87a3-a47c83351164" target="_blank">https://mavenanalytics.io/challenges</a></p>
+        </div>
+
+        <div class="section">
+            <div class="bar-chart">
+            <h2>Power BI Report:</h2>
+            <div class="visualization-image">
+                <!-- <p>The visualizations provide insights into the Indian election results of 2024.</p> -->
+                <iframe title="MTA Daily Ridership" width="1024" height="612" src="https://app.powerbi.com/view?r=eyJrIjoiOWZkMTQ5ZTQtYjBhNC00NTc0LTljMWEtOTExZjA5ZDQxY2E5IiwidCI6IjE0MGE3MGUxLWFiYTAtNGVkMS1iZTFkLTA0YzEwOTdmZmM4YyIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>
+                
+
+                
+            </div>
+
+            <div class="kpi">
+                <!-- <h3>Customer Analysis:</h3> -->
+                   
+                    <p><b>Overview: </b> Overall, pre-pandemic recovery is still down by <b style="color: red;">-44.80%</b>. The top 3 recovered transportation modes are <b style="color: grey;">Access-A-Ride</b><b style="color: green;">(+20%)</b>, <b style="color: grey;">Bridges & Tunnels<b style="color: green;">(+1%)</b></b>, and <b style="color: grey;">LIRR <b style="color: red;">(-12%)</b></b> by 2024.  COVID-19 significantly impacted all transportation modes until 2022. Metro, Subways, Buses, and Staten Island Railways are experiencing difficulties in their recovery.</p>
+                    <p>Since Access-A-Ride and Bridges & Tunnels have fully recovered to pre-pandemic levels, their data has been <b>excluded</b> from further analysis. Remaining transportation modes are categorized into two groups, short-distance transportation and long-distance transportation. These two categories are considered to better understand the unique recovery patterns of each type of service.</p>
+                    <p><b>Short Distance Transportation:</b> It refers to modes of transit designed for daily commutes and local travel within a city or nearby areas, such as <b style="color: grey;">Subways</b>, <b style="color: gray;">Buses</b>, and <b style="color: gray;">Staten Island Railway</b>.</p>
+                    <p><b style="color: grey;">Subways:</b> These are the most available mode of short-distance transportation. They were heavily impacted during the pandemic. Recovery began in 2021 but slowed down in 2023. Since then, there has been no improvement in the recovery percentage. By the end of 2024, it remains at -29%, unchanged from the previous year.</p>
+                    <p><b style="color: grey;">Buses:</b> Buses are another key mode of short-distance transportation. Like other modes, buses were heavily impacted during the pandemic. Recovery began in 2021, but there has been no year-on-year progress. Since 2022, the recovery percentage has remained stagnant and is even lower in 2024.</p>
+                    <p><b style="color: grey;">Staten Island Railways:</b> This transportation is exclusive to Staten Island and, like other transit modes, was significantly impacted during the pandemic. By the end of this year, it remains -50% below pre-pandemic levels, showing minimal year-on-year recovery progress.</p>
+                    
+                    <p><b>Long Distance Transportation:</b> It refers to modes of transit designed for traveling between cities or regions, such as <b style="color: grey;">Metro North</b> and <b style="color: gray;">LIRR</b>.</p>   
+                     <p><b style="color: gray;">LIRR:</b> LIRR is the most utilized mode of long-distance transportation and experienced a significant -75% decline during the pandemic. By the end of this year, it is -12% below pre-pandemic levels, showing gradual year-over-year improvement. Compared to the Metro, LIRR is recovering at a faster pace.</p>
+                     <p><b style="color: gray;">Metro North:</b> Metro is the second most utilized mode of long-distance transportation and experienced a significant -83% decline during the pandemic. By the end of this year, it is -22% below pre-pandemic levels, showing gradual year-over-year improvement.</p>
+                     
+                     <p><b>Future Projections: </b> For trend analysis and future prediction, polynomial regression was applied. The degree of the polynomial was determined based on visual inspection and trial-and-error methods. Python's <b style="color: gray;">scikit-learn library</b> was used for this analysis, utilizing the <b style="color: gray;">LinearRegression</b> model combined with the <b style="color: gray;">PolynomialFeatures</b> function to fit the data effectively.</p>
+                        <p> According to the analysis, in short-distance transportation, <b style="color: gray;">Buses</b> are expected to recover by January, 2025, Subways by June, 2025, and Staten Island Railways by July, 2025. In contrast, in long-distance transportation, <b style="color: gray;">LIRR </b>is projected to recover by December, 2024, and Metro-North by February, 2025. This indicates that long-distance transportation is on track to recover faster than short-distance transportation.</p>
+                     
+                     
+                     
+
+
+           
