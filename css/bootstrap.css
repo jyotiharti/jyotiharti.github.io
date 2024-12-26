@@ -869,7 +869,12 @@ pre code {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  align-items: center;
 }
+.container_center {
+  align-items: center;
+}
+
 .container:before, .container:after {
   content: " ";
   display: table;
