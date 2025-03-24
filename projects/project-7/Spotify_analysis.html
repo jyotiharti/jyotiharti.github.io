@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Analysis</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color:#ffff;
+            color: #333;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .kpi, .bar-chart, .pie-chart, .table {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .kpi p, .bar-chart p, .pie-chart p, .table p {
+            margin-top: 0;
+        }
+        .source {
+            font-size: 0.9em;
+            color: #555;
+        }
+        .visualization-image {
+            margin-top: 20px;
+            text-align: center;
+            background-color: #fafafa; /* Background color added */
+            padding: 0px;
+            border-radius: 8px;
+        }
+        .visualization-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="section">
+            <h1>Spotify Streaming Trend Analysis</h1>
+            <p></p>
+            <h2>Description:</h2>
+            <p>Spotify Wrapped has become a social and cultural phenomenon, showcasing listeners' most-streamed artists, tracks, total minutes listened, and personalized playlists. Using the provided dataset, I conducted an in-depth analysis, exploring every aspect of the data to uncover key insights into listening habits, trends, and user engagement.This analysis is performed using data modeling and visualization techniques in Power BI.</p>
+   
+        </div>
+
+        <div class="section">
+            <h2>Objective:</h2>
+            <p>The objective of this project is to analyze and visualize the Spotify user's complete music streaming history data, including timestamps, track, artist, and album names, and reasons for playing and ending each track.</p>
+            <p>The project seeks to address the following questions:</p> 
+            <ul>
+                <li>Which artist did they listen to the most this year? Is it the same as last year?</li>
+                <li>Which songs have they played the most? How often do they skip them?</li>
+                <li>What time of day do they typically listen to music?</li>
+                <li>How often do they explore new artists versus replaying favorites?</li>
+            </ul>
+
+        
+                
+            <p class="source"><strong>Source:</strong> <a href="https://mavenanalytics.io/challenges/maven-music-challenge/e161353d-9967-4297-869c-505de168e610" target="_blank">https://mavenanalytics.io/challenges</a></p>
+        </div>
+
+        <div class="section">
+            <div class="bar-chart">
+            <h2>Power BI Report:</h2>
+            <div class="visualization-image">
+                <!-- <p>The visualizations provide insights into the Indian election results of 2024.</p> -->
+                <iframe title="MTA Daily Ridership" width="1024" height="612" src="https://app.powerbi.com/view?r=eyJrIjoiMWE5ODIzNzQtNzk3OS00YzJkLWI3NjgtMGQxNzVhYTk5YTFkIiwidCI6IjE0MGE3MGUxLWFiYTAtNGVkMS1iZTFkLTA0YzEwOTdmZmM4YyIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>
+                
+
+                
+            </div>
+
+            <div class="kpi">
+
+                <!-- <h3>Customer Analysis:</h3> -->
+                    <h2>Overview:</h2> 
+                    <p>This project explores user listening behavior over the past year. It identifies their most-listened-to artist and compares it with the previous year's favorite. It highlights their top-played songs and examines how frequently they skip them. The analysis also reveals the times of day they most often listen to music. Lastly, it looks at their listening habits in terms of discovering new artists versus replaying familiar favorites, offering insights into their musical preferences and exploration patterns.
+
+                        The data uncovers whether listening patterns are consistent or evolving year over year.
+                        It also sheds light on engagement levels with favorite tracks versus newly discovered content.
+                        Overall, the project offers a personalized snapshot of the user’s music journey across time.</p>
+                    <!-- <p><b>Overview: </b> Cinema is more than just storytelling; it's a <b style="color: #6497b1 ;">blend of art and numbers</b>, where every box office success is backed by powerful insights. My <b style="color: #6497b1;">Disney Pixar Movie Dashboard</b> is a perfect harmony of <b style="color: #6497b1;">data analytics and visual storytelling</b>, designed to <b style="color: #6497b1;">bring Pixar’s legacy to life through data</b>. </p> 🚀📊
+                        <p>With this dashboard, I aim to transform <b style="color: #6497b1;">raw film data</b> into an <b style="color: #6497b1;">engaging, interactive, and visually appealing</b> experience <b style="color: #6497b1;">where numbers meet nostalgia!.</b></p>
+                       
+                    
+                    -->
+
+
+           

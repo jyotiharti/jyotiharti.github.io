@@ -870,6 +870,7 @@ pre code {
   padding-left: 15px;
   padding-right: 15px;
   align-items: center;
+  justify-content: center;
 }
 .container_center {
   align-items: center;
