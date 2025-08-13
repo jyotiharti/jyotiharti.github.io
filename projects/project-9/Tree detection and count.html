@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Detection and Count</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color:#ffff;
+            color: #333;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .kpi, .bar-chart, .pie-chart, .table {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .kpi p, .bar-chart p, .pie-chart p, .table p {
+            margin-top: 0;
+        }
+        .source {
+            font-size: 0.9em;
+            color: #555;
+        }
+        .visualization-image {
+            margin-top: 20px;
+            text-align: center;
+            background-color: #fafafa; /* Background color added */
+            padding: 0px;
+            border-radius: 8px;
+        }
+        .visualization-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="section">
+            <h1>Tree Detection and Counting</h1>
+            
+
+        <div class="section">
+            <h2>The Motivation:</h2>
+            <p>As urban areas continue to grow rapidly, managing green infrastructure within cities has become increasingly important. Trees and green spaces in urban environments not only help clean the air and cool down heat-prone areas, but also significantly improve residents’ quality of life. However, mapping these urban trees poses significant challenges due to the complex dynamics of cityscapes. Factors such as building shadows, diverse architectural layouts, and the sparse distribution of trees make the task even more difficult. </p>    
+
+
+            <p class="source"><strong>Source:</strong> <a href="https://www.periopsis.com/blog/tree-counter-v2/" target="_blank">https://www.periopsis.com/blog/tree-counter-v2/</a></p>
+
+
+
+        </div>
+
+        
+            <div class="section">
+  <h2>Project Images:</h2>
+  <div class="visualization-image">
+    <div class="slider" id="slider">
+      <div class="slides" id="slides">
+        <img src="images/nicosia-tree-1.PNG" alt="Visualization Image 1" class="active">
+        <img src="images/nicosia-tree-2.PNG" alt="Visualization Image 2">
+        <img src="images/nicosia-tree-3.PNG" alt="Visualization Image 3">
+      </div>
+      <div class="nav">
+        <button id="prevBtn" aria-label="Previous">&#10094;</button>
+        <button id="nextBtn" aria-label="Next">&#10095;</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.visualization-image {
+  text-align: center;
+  background-color: #fafafa;
+  border-radius: 8px;
+  padding: 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 100%;
+}
+
+/* Make slider fill container width and *have a height* (set via JS) */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 0;            /* will be set by JS */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.slides { position: relative; height: 100%; }
+
+/* Stack images; fit to container width */
+.slides img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 250ms ease;
+  pointer-events: none;
+}
+
+.slides img.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  left: 0; right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 8px;
+}
+
+.nav button {
+  background: rgba(44,62,80,0.75);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.nav button:disabled { opacity: 0.4; cursor: default; }
+</style>
+
+<script>
+const slider = document.getElementById('slider');
+const imgs = Array.from(document.querySelectorAll('#slides img'));
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+let index = 0;
+
+function setSliderHeightToImage(img) {
+  if (!img.complete || img.naturalWidth === 0) {
+    img.addEventListener('load', () => setSliderHeightToImage(img), { once: true });
+    return;
+  }
+  // Compute height so the image fits width:100% while keeping aspect ratio
+  const width = slider.clientWidth;
+  const height = Math.round(width * (img.naturalHeight / img.naturalWidth));
+  slider.style.height = height + 'px';
+}
+
+function update() {
+  imgs.forEach((im, i) => im.classList.toggle('active', i === index));
+  prevBtn.disabled = index === 0;
+  nextBtn.disabled = index === imgs.length - 1;
+  setSliderHeightToImage(imgs[index]);
+}
+
+prevBtn.addEventListener('click', () => {
+  if (index > 0) { index--; update(); }
+});
+nextBtn.addEventListener('click', () => {
+  if (index < imgs.length - 1) { index++; update(); }
+});
+
+// Recalculate on resize to keep things responsive
+window.addEventListener('resize', () => setSliderHeightToImage(imgs[index]));
+
+// Init
+update();
+</script>
+
+
+        
+            
+        <div class="section">
+            <h2>The Method:</h2>
+            <p>The project focused on training deep learning models using high-resolution visible satellite imagery. Thousands of images from dense urban regions across various parts of Nicosia were manually selected and annotated. Trees were labelled either as smaller or larger entities, based on their canopy size, as observed in satellite images. </p>    
+            <p>Our proprietary AI model was trained using these labelled images in a supervised manner to recognize and highlight the locations of trees. To count the number of trees accurately, a proprietary tree-counting algorithm was developed. Once the model identifies the regions covered by tree canopies, the tree-counting algorithm takes over. It starts by detecting the tree canopy contours and then overlays a hexagonal grid within those boundaries. We chose a hexagonal grid because it represents the random spacing of trees better than a square grid. Within this grid, the algorithm approximates the positions of individual tree centre’s. Hyperparameters such as tree radius and canopy overlap threshold were selected experimentally, based on the typical size and spatial distribution of trees in the study area.</p>
+        </div>
+
+         <div class="section">
+            <h2>The Result:</h2>
+            <p>To check how well the model worked, we evaluated the results using Precision and Recall. To verify the performance of the tree-counting algorithm, we also evaluated how close the predicted tree counts were to the actual number of trees. On a test set with 13,459 trees, the Mean Absolute Error was 2.73. This result shows that the model can successfully detect and count trees even in dense urban areas, making it a useful tool for mapping green spaces in urban locations.  </p>    
+        </div>
+
+        <div class="section">
+            <h2>The Importance:</h2>
+            <p>This project plays a crucial role in helping us understand the distribution of trees within densely populated urban areas around the world. Mapping urban greenery at this scale provides valuable insights for city planners, environmental agencies, and policymakers. With an accurate tree census in the spatiotemporal domain, authorities can monitor the status of urban green spaces, identify areas lacking vegetation, reduce the urban heat island effect, and support afforestation or reforestation efforts where needed.  </p>    
+        </div>
+
+          <div class="section">
+            <h2>The Perspective:</h2>
+            <p>The success of this initiative demonstrates how modern technologies, like deep learning combined with high-resolution satellite imagery, can produce reliable environmental data even in complex city environments. This information can guide urban planning decisions, promote the creation and preservation of green zones, help mitigate urban heat effects, and improve the overall sustainability and livability of cities. By making greenery a measurable and trackable asset, cities can move toward smarter, greener development strategies. </p>    
+        </div>
+
+        
+
